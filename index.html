@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a101d">
+  <meta name="description" content="GearLoop — סביבת הדגמה אינטראקטיבית לתפעול השכרות, הפקות, ציוד ומחסנים. נתונים מדומים בלבד.">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>GearLoop — Interactive Showcase</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="shell" class="shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="GearLoop דמו">
+        <span class="brand-symbol"><svg viewBox="0 0 44 44" fill="none" aria-hidden="true"><path d="M23 5a17 17 0 1 0 16 23" stroke="currentColor" stroke-width="6" stroke-linecap="round"/><path d="M16 15h12v12H16z" fill="currentColor" rx="4"/><path d="M32 5l7 8-10 2" stroke="#87EBF7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span><b>Gear<span class="accent">Loop</span></b><small>OPERATIONS STUDIO</small></span>
+      </a>
+      <div class="sidebar-caption"><span class="side-live-dot"></span> INTERACTIVE PREVIEW <span class="side-version">V.26.11</span></div>
+      <nav class="sidebar-nav" id="nav" aria-label="ניווט ראשי"></nav>
+      <div class="sidebar-bottom">
+        <div class="side-note"><div class="side-note-head"><span>סביבת התנסות</span><span class="note-dot"></span></div><p>כל הנתונים בדויים. השינויים נשמרים בדפדפן שלך בלבד.</p><button id="resetSidebar" class="text-link" type="button">איפוס נתוני ההדגמה <span>↗</span></button></div>
+        <div class="user-row"><span class="avatar">GL</span><span class="user-desc"><strong>GearLoop Showcase</strong><small>גישה חופשית · דמו</small></span><span class="user-status"></span></div>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="topbar-primary"><button id="mobileNav" class="icon-button mobile-menu" type="button" aria-label="פתיחת תפריט">☰</button><span class="crumb-root">GEARLOOP</span><span class="crumb-sep">/</span><span id="crumb" class="crumb-current">סקירה כללית</span></div>
+        <div class="topbar-actions"><div class="search-box"><span class="search-glass">⌕</span><input id="globalSearch" type="search" placeholder="חיפוש הזמנה, ציוד, לקוח..." aria-label="חיפוש מערכת"><kbd>/</kbd></div><span class="top-divider"></span><div class="top-date" id="topDate">09 NOV 2026</div><span class="top-divider"></span><span class="live-chip"><span class="chip-dot"></span> DEMO LIVE</span><button id="topNew" class="primary-btn compact" type="button">+ הזמנה חדשה</button></div>
+      </header>
+      <main id="view" class="page" tabindex="-1" aria-live="polite"></main>
+      <footer class="app-footer"><span>GearLoop <span class="accent">/</span> Product Playground</span><span>DEMO DATA ONLY · NO LIVE OPERATIONS · LOCAL BROWSER STATE</span></footer>
+    </div>
+  </div>
+  <div id="overlay" class="overlay hidden" role="presentation"><div class="dialog" role="dialog" aria-modal="true" aria-label="חלונית פעולה" id="dialog"></div></div>
+  <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
